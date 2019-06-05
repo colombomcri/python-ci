@@ -1,16 +1,19 @@
-
+version: 2
 jobs:
   build:
-    working_directory: ~python-ci
+    working_directory: ../python-ci
+    docker:
+      image: circleci/python:3.6.4
+    
 
-machine:
-  python:
-    version: 3.6.7
+# machine:
+#   python:
+#     version: 3.6.7
 
-dependencies:
-  override:
-    - pip install -r ../requirements.txt
+# dependencies:
+#   override:
+#     - pip install -r ../requirements.txt
 
-test:
-  override:
-    - nosetests ../test/test_math.py
+# test:
+#   override:
+#     - nosetests ../test/test_math.py
