@@ -12,6 +12,9 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+            echo HI
+            ls .
+
     
   #test:
    # - nosetests test/test_math.py
