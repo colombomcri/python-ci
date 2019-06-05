@@ -15,6 +15,11 @@ jobs:
             echo HI
             ls .
             pipenv run "nosetests test/test_math.py"
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
+          destination: tr1
 
     
   #test:
