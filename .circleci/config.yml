@@ -4,8 +4,11 @@ jobs:
     working_directory: ../python-ci
     docker:
       - image: circleci/python:3.6.4
-  steps:
-    - run: echo "hi"
+    steps:
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+      - run: echo "hi"
 
 # machine:
 #   python:
