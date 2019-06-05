@@ -8,4 +8,4 @@ class MathTest(unittest.TestCase):
 		'''
 		xx = Math()
 		yy = xx.addition(2,4)
-		self.assertEqual(yy, 8)
+		self.assertEqual(yy, 6)
