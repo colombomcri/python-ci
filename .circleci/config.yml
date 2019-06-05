@@ -4,7 +4,8 @@ jobs:
     working_directory: ../python-ci
     docker:
       - image: circleci/python:3.6.4
-    
+  steps:
+    - run: echo "hi"
 
 # machine:
 #   python:
