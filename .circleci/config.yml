@@ -9,11 +9,12 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run:
-        command: |
-          sudo pip install pipenv
-          pipenv install
-      - test:
-        - nosetests test/test_math.py
+          command: |
+            sudo pip install pipenv
+            pipenv install
+    
+  test:
+    - nosetests test/test_math.py
           #pipenv run nosetests /test/test_math.py
 
 # machine:
